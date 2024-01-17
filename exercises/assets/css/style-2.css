@@ -21,12 +21,17 @@ input, button, textarea, select { font: inherit }
 
 /* ================= ENDS ================ */
 
+body{
+    background-color: #86A789;
+}
+
 h1 {
     font-size: 84px;
     margin-bottom: 64px;
     text-align: center;
     font-weight: normal;
     letter-spacing: 4px;
+    background-color: #4F6F52;
 }
 
 h2 {
@@ -34,6 +39,7 @@ h2 {
     margin-bottom: 4px;
     margin-top: 54px;
     text-transform: uppercase;
+    color: #4F6F52;
 }
 
 p {

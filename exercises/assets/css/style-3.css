@@ -20,9 +20,16 @@ input, button, textarea, select { font: inherit }
  }
 
 
+body{
+    background-color: #86A789;
+}
+ 
+
+
 h2 {
     font-size: 56px;
     margin-bottom: 4px;
+    color: #4F6F52;
 }
 
 h3 {
