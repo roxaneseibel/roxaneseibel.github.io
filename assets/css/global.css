@@ -27,6 +27,17 @@ body {
     background-color: #86A789;
 }
 
+
+.links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-inline: 7%;
+}
+
+
 h3 { color: #527853}
 p { background-color: #4F6F52 }
 
