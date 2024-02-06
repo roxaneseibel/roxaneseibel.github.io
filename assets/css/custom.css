@@ -33,7 +33,7 @@ nav img{
 
 
 .me{
-
+    
     background-color: #A9B388;
     display: flex;
     justify-content: space-between;
@@ -134,17 +134,7 @@ footer{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.menu-logo {
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 0%;
-    padding-bottom: 0%;
-    padding-inline: 7%;
-    
-}
+
 
 .head h1 {
     font-size: calc(64px + (112 - 64) * ((100vw - 320px) / (1600 - 320)));
@@ -177,6 +167,8 @@ footer{
 .footer-icons{
     color: #fff;
 }
+
+
 
 
 
