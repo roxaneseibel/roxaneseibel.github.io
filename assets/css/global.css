@@ -27,13 +27,22 @@ body {
     background-color: #86A789;
 }
 
+nav img{
+    width: 100px;
+}
+
+.nav ,.menu{
+    padding-top: 0px;
+    background-color: black;
+}
+
 
 .links-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     padding-inline: 7%;
 }
 
