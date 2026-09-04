@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roxane Seibel — Portfolio</title>
+    <meta name="description" content="Portfolio de Roxane Seibel, étudiante en informatique à EPITA. Découvrez mes projets de l'année.">
+
+    <link rel="icon" href="assets/img/favicon.ico">
+
+    <!-- Google Fonts : Fraunces (titres) + Nunito Sans (texte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="brand">
+                <img src="assets/img/chat-removebg-preview.png" alt="Logo chat">
+                <span>Roxane Seibel</span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== Hero ===== -->
+    <header class="hero" id="hero">
+        <img class="hero-bg" src="assets/img/prairie.avif" alt="">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-kicker">Bonjour, je suis</p>
+            <h1>Roxane Seibel</h1>
+            <p class="hero-sub">Développeuse front-end &amp; design d'interface — je conçois des interfaces de la maquette au code.</p>
+            <div class="hero-actions">
+                <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                <a href="#contact" class="btn btn-ghost">Me contacter</a>
+            </div>
+        </div>
+        <a href="#apropos" class="hero-scroll" aria-label="Défiler vers le contenu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </a>
+    </header>
+
+    <main>
+        <!-- ===== À propos ===== -->
+        <section class="section" id="apropos">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <div class="about-head">
+                            <img class="about-photo" src="assets/img/profil.png" alt="Photo de Roxane Seibel">
+                            <div>
+                                <p class="section-kicker">À propos</p>
+                                <h2>Qui suis-je&nbsp;?</h2>
+                            </div>
+                        </div>
+                        <p>Étudiante en cycle ingénieur à <strong>EPITA</strong> (spécialisation MTI — applications mobiles et web), je conçois des interfaces <strong>de la maquette au code</strong>. À la croisée du développement front-end et de l'illustration, j'associe rigueur technique et sensibilité graphique pour construire des produits soignés et utilisables.</p>
+                        <p>Après un stage de 5 mois comme développeuse logiciel chez <strong>Alter Technology</strong> (groupe TÜV NORD, secteur spatial), je recherche un stage <strong>front-end / design d'interface</strong> à partir de février 2027. Ce portfolio rassemble mes projets récents.</p>
+                        <div class="cv-actions">
+                            <a href="assets/CV.pdf" download="CV-Roxane-Seibel.pdf" class="btn btn-outline">
+                                Télécharger mon CV
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                            </a>
+                            <button type="button" class="btn-icon" data-cv-preview aria-label="Aperçu du CV" title="Aperçu du CV">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <aside class="skills-panel reveal" id="competences">
+                        <h3>Compétences</h3>
+                        <div class="skill-group">
+                            <h4>Design &amp; création</h4>
+                            <ul class="skills">
+                                <li>Figma</li><li>Maquettage UI</li><li>Prototypage</li><li>UI/UX</li><li>Illustration numérique</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Web &amp; mobile</h4>
+                            <ul class="skills">
+                                <li>React</li><li>React Native</li><li>Next.js</li><li>Node.js</li><li>Swift</li><li>Kotlin</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Langages</h4>
+                            <ul class="skills">
+                                <li>TypeScript</li><li>JavaScript</li><li>C#</li><li>Python</li><li>Java</li><li>C</li><li>C++</li><li>SQL</li><li>Shell</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Back-end</h4>
+                            <ul class="skills">
+                                <li>.NET</li><li>Entity Framework Core</li><li>Quarkus</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Bases de données</h4>
+                            <ul class="skills">
+                                <li>PostgreSQL</li><li>Neo4j</li><li>SQLite</li><li>RabbitMQ</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>DevOps</h4>
+                            <ul class="skills">
+                                <li>Docker</li><li>Docker Compose</li><li>GitLab</li><li>GitHub</li><li>Nginx</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Autres</h4>
+                            <ul class="skills">
+                                <li>Unity (C#)</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Atouts</h4>
+                            <ul class="skills skills-soft">
+                                <li>Autonomie</li><li>Travail en équipe</li><li>Dialogue avec des interlocuteurs non techniques</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Projets ===== -->
+        <section class="section section-alt" id="projets">
+            <div class="container">
+                <p class="section-kicker reveal">Projets</p>
+                <h2 class="reveal">Ce que j'ai réalisé cette année</h2>
+
+                <div class="projects">
+                    <!-- Remplace les .placeholder-thumb par de vraies captures d'écran
+                         quand tu en as : <img src="assets/img/nom-projet.png" alt="..."> -->
+
+                    <article class="project-card reveal">
+                        <div class="project-thumb placeholder-thumb thumb-mtp">
+                            <span>🎸</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Meet To The Pit</h3>
+                            <p>Application qui met en relation des amateurs de musique pour se rendre ensemble à des concerts et événements, avec covoiturages et hébergements entre participants — en réponse à l'isolement étudiant. J'ai conçu l'interface et l'expérience utilisateur, du maquettage à l'intégration front.</p>
+                            <ul class="project-tags">
+                                <li>React</li><li>Vite</li><li>FastAPI</li><li>Firebase</li><li>Deezer API</li><li>Google API</li>
+                            </ul>
+                            <a class="project-link project-link-soon" title="Lien bientôt disponible">Voir le projet
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-thumb placeholder-thumb thumb-eco">
+                            <span>🧾</span>
+                            <em class="project-badge">🏆 Hackathon gagné</em>
+                        </div>
+                        <div class="project-body">
+                            <h3>EcoTicket</h3>
+                            <p>Application qui scanne un ticket de caisse et calcule l'empreinte carbone des achats (emballages, type d'aliment, impact de l'élevage…). Elle permet de suivre l'évolution de son empreinte dans le temps et conseille des paniers plus responsables. Projet vainqueur d'un hackathon.</p>
+                            <ul class="project-tags">
+                                <li>React</li><li>FastAPI</li><li>PostgreSQL</li><li>Gemini API</li><li>Docker</li><li>Kubernetes</li><li>CI/CD</li>
+                            </ul>
+                            <a class="project-link project-link-soon" title="Lien bientôt disponible">Voir le projet
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-thumb placeholder-thumb thumb-princess">
+                            <span>👑</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>The Hidden World of Princesses</h3>
+                            <p>Jeu vidéo de type die &amp; retry sur le thème des princesses, développé sur Unity en groupe de 4. Direction artistique complète : l'ensemble des éléments graphiques (personnages, objets, décors), l'audio, le menu et les écrans d'options.</p>
+                            <ul class="project-tags">
+                                <li>Unity</li><li>C#</li><li>Direction artistique</li><li>Audio</li>
+                            </ul>
+                            <a class="project-link project-link-soon" title="Lien bientôt disponible">Voir le projet
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-thumb placeholder-thumb thumb-devil">
+                            <span>😈</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Devil's Never Lie</h3>
+                            <p>Top down shooter roguelite développé sur Unity en une semaine : affrontez des vagues de monstres dans les enfers sans succomber à la corruption du diable. Un défi de développement rapide, du gameplay à l'ambiance.</p>
+                            <ul class="project-tags">
+                                <li>Unity</li><li>C#</li><li>Roguelite</li><li>Game jam</li>
+                            </ul>
+                            <a class="project-link project-link-soon" title="Lien bientôt disponible">Voir le projet
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Contact ===== -->
+        <section class="section section-contact" id="contact">
+            <div class="container contact">
+                <p class="section-kicker reveal">Contact</p>
+                <h2 class="reveal">Envie d'échanger&nbsp;?</h2>
+                <p class="reveal">À la recherche d'un stage front-end / design d'interface à partir de février 2027 — n'hésitez pas à me contacter par mail ou à me retrouver sur mes réseaux.</p>
+                <div class="contact-actions reveal">
+                    <a href="mailto:roxane.seibel@gmail.com" class="btn btn-primary">M'écrire un mail</a>
+                    <button type="button" class="btn btn-ghost" data-cv-preview>
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        Voir mon CV
+                    </button>
+                </div>
+                <div class="socials reveal">
+                    <a href="https://github.com/roxaneseibel" aria-label="GitHub" target="_blank" rel="noopener">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.24 2.76.12 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.66.8.55A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.51v-7.12c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Modale d'aperçu du CV ===== -->
+    <div class="modal" id="cv-modal" aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-box" role="dialog" aria-modal="true" aria-label="Aperçu du CV">
+            <div class="modal-bar">
+                <span>CV — Roxane Seibel</span>
+                <div class="modal-bar-actions">
+                    <a href="assets/CV.pdf" download="CV-Roxane-Seibel.pdf" class="modal-download" title="Télécharger">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    </a>
+                    <button type="button" class="modal-close" data-close aria-label="Fermer l'aperçu">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                    </button>
+                </div>
+            </div>
+            <iframe data-src="assets/CV.pdf" title="Aperçu du CV de Roxane Seibel"></iframe>
+        </div>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <p>© <span id="year"></span> Roxane Seibel — Fait avec 🌿</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
