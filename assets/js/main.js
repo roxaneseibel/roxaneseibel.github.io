@@ -66,3 +66,36 @@ window.addEventListener('keydown', (e) => {
 
 // ===== Année du footer =====
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// ===== Lightbox des captures de projet =====
+const lightbox = document.getElementById('shot-lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+let lastShotTrigger = null;
+
+const openLightbox = (btn) => {
+    const thumb = btn.querySelector('img');
+    lightboxImg.src = btn.dataset.shot;
+    lightboxImg.alt = thumb ? thumb.alt : '';
+    lightboxCaption.textContent = btn.dataset.shotCaption || '';
+    lastShotTrigger = btn;
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+};
+const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastShotTrigger) lastShotTrigger.focus();
+};
+
+document.querySelectorAll('.shot').forEach((btn) =>
+    btn.addEventListener('click', () => openLightbox(btn))
+);
+lightbox.querySelectorAll('[data-shot-close]').forEach((el) =>
+    el.addEventListener('click', closeLightbox)
+);
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
+});

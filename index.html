@@ -197,17 +197,36 @@
                     </article>
 
                     <article class="project-card reveal">
-                        <div class="project-thumb placeholder-thumb thumb-devil">
-                            <span>😈</span>
+                        <div class="project-thumb">
+                            <img src="assets/img/devil-menu.png" alt="Écran-titre de Devil's Never Lie : les boutons Start, Settings et Quit Game devant un paysage infernal de lave sous une lune rouge." loading="lazy" decoding="async">
                         </div>
                         <div class="project-body">
                             <h3>Devil's Never Lie</h3>
                             <p>Top down shooter roguelite développé sur Unity en une semaine : affrontez des vagues de monstres dans les enfers sans succomber à la corruption du diable. Un défi de développement rapide, du gameplay à l'ambiance.</p>
+
+                            <ul class="project-shots">
+                                <li>
+                                    <button type="button" class="shot" data-shot="assets/img/devil-upgrades.png" data-shot-caption="À chaque palier, trois parchemins d'amélioration : les plus puissants font grimper la corruption.">
+                                        <img src="assets/img/devil-upgrades.png" alt="Trois parchemins d'amélioration proposés au joueur : Manic Trigger, Sulphurous Edge et Abyssal Mending." loading="lazy" decoding="async">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="shot" data-shot="assets/img/devil-gameplay.png" data-shot-caption="Arène ouverte : le joueur affronte les âmes errantes des enfers.">
+                                        <img src="assets/img/devil-gameplay.png" alt="Phase de jeu : le personnage joueur fait face à un spectre dans une arène rouge." loading="lazy" decoding="async">
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="shot" data-shot="assets/img/devil-maze.png" data-shot-caption="Salles en labyrinthe : coffres à récupérer et couloirs étroits où esquiver devient vital.">
+                                        <img src="assets/img/devil-maze.png" alt="Niveau en labyrinthe avec des couloirs blancs, un coffre à ouvrir et plusieurs ennemis." loading="lazy" decoding="async">
+                                    </button>
+                                </li>
+                            </ul>
+
                             <ul class="project-tags">
                                 <li>Unity</li><li>C#</li><li>Roguelite</li><li>Game jam</li>
                             </ul>
-                            <a class="project-link project-link-soon" title="Lien bientôt disponible">Voir le projet
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            <a class="project-link" href="https://roxocro.itch.io/devilsneverlie" target="_blank" rel="noopener">Télécharger sur itch.io
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
                             </a>
                         </div>
                     </article>
@@ -260,6 +279,18 @@
             </div>
             <iframe data-src="assets/CV.pdf" title="Aperçu du CV de Roxane Seibel"></iframe>
         </div>
+    </div>
+
+    <!-- ===== Lightbox des captures de projet ===== -->
+    <div class="lightbox" id="shot-lightbox" aria-hidden="true">
+        <div class="modal-backdrop" data-shot-close></div>
+        <figure class="lightbox-box" role="dialog" aria-modal="true" aria-label="Aperçu de la capture d'écran">
+            <button type="button" class="lightbox-close" data-shot-close aria-label="Fermer l'aperçu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+            <img id="lightbox-img" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
     </div>
 
     <!-- ===== Footer ===== -->
