@@ -661,7 +661,6 @@ button.btn-ghost {
     object-fit: cover;
 }
 /* Captures d'app mobile : format portrait, cadrage sur le haut de l'écran */
-.project-thumb--tall img { object-position: top; }
 .project-shots--tall .shot img {
     aspect-ratio: 3 / 4;
     object-position: top;
