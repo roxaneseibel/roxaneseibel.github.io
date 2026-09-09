@@ -392,9 +392,24 @@ button.btn-ghost {
     box-shadow: var(--shadow-hover);
 }
 .project-thumb {
+    position: relative;
     aspect-ratio: 16 / 9;
     overflow: hidden;
 }
+/* Vignette de type logo : affichée à sa taille réelle, centrée, sans agrandissement */
+.project-thumb--logo {
+    display: grid;
+    place-items: center;
+    background-color: var(--cream);
+}
+.project-thumb--logo img {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+}
+.project-card:hover .project-thumb--logo img { transform: none; }
 .project-thumb img {
     width: 100%;
     height: 100%;
@@ -417,12 +432,6 @@ button.btn-ghost {
     transition: transform 0.3s ease;
 }
 .project-card:hover .placeholder-thumb > span { transform: scale(1.15); }
-
-/* Variantes de vignettes par projet (en attendant les captures d'écran) */
-.thumb-mtp { background: linear-gradient(135deg, var(--olive-500), var(--olive-900)); }
-.thumb-eco { background: linear-gradient(135deg, var(--sage), var(--olive-700)); }
-.thumb-princess { background: linear-gradient(135deg, #e8c9a0, var(--sage)); }
-.thumb-devil { background: linear-gradient(135deg, #7a4a3a, #2f1e1a); }
 
 .project-badge {
     position: absolute;

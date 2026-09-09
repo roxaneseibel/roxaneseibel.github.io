@@ -253,9 +253,6 @@
           <h2 class="reveal">Ce que j'ai réalisé cette année</h2>
 
           <div class="projects">
-            <!-- Remplace les .placeholder-thumb par de vraies captures d'écran
-                         quand tu en as : <img src="assets/img/nom-projet.png" alt="..."> -->
-
             <article class="project-card reveal">
               <div class="project-thumb">
                 <img
@@ -381,8 +378,13 @@
             </article>
 
             <article class="project-card reveal">
-              <div class="project-thumb placeholder-thumb thumb-eco">
-                <span>🧾</span>
+              <div class="project-thumb project-thumb--logo">
+                <img
+                  src="assets/img/ecoticket-logo.png"
+                  alt="Logo d'EcoTicket"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <em class="project-badge">🏆 Hackathon gagné</em>
               </div>
               <div class="project-body">
@@ -394,6 +396,100 @@
                   son empreinte dans le temps et conseille des paniers plus
                   responsables. Projet vainqueur d'un hackathon.
                 </p>
+
+                <ul class="project-shots project-shots--tall">
+                  <li>
+                    <button
+                      type="button"
+                      class="shot"
+                      data-shot="assets/img/ecoticket-scan.png"
+                      data-shot-caption="Le ticket est photographié puis lu automatiquement."
+                    >
+                      <img
+                        src="assets/img/ecoticket-scan.png"
+                        alt="Lecture en cours d'un ticket de caisse"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="shot"
+                      data-shot="assets/img/ecoticket-score.png"
+                      data-shot-caption="Le panier reçoit une note sur 100, détaillée par aliment et par emballage."
+                    >
+                      <img
+                        src="assets/img/ecoticket-score.png"
+                        alt="Score de 68 sur 100 attribué à un panier"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="shot"
+                      data-shot="assets/img/ecoticket-equivalences.png"
+                      data-shot-caption="Les kilos de CO₂e traduits en équivalents concrets, plus parlants qu'un chiffre brut."
+                    >
+                      <img
+                        src="assets/img/ecoticket-equivalences.png"
+                        alt="Équivalences du panier en kilomètres en voiture et en bouteilles plastique"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="shot"
+                      data-shot="assets/img/ecoticket-detail.png"
+                      data-shot-caption="Le détail produit par produit, avec sa catégorie et son emballage."
+                    >
+                      <img
+                        src="assets/img/ecoticket-detail.png"
+                        alt="Détail du panier produit par produit avec l'empreinte de chacun"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="shot"
+                      data-shot="assets/img/ecoticket-evolution.png"
+                      data-shot-caption="L'évolution du score dans le temps, et le bilan carbone de l'application elle-même."
+                    >
+                      <img
+                        src="assets/img/ecoticket-evolution.png"
+                        alt="Courbe d'évolution du score au fil des tickets scannés"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button
+                      type="button"
+                      class="shot"
+                      data-shot="assets/img/ecoticket-historique.png"
+                      data-shot-caption="L'historique des tickets scannés, chacun avec sa note."
+                    >
+                      <img
+                        src="assets/img/ecoticket-historique.png"
+                        alt="Historique des tickets scannés avec leur note respective"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </button>
+                  </li>
+                </ul>
+
                 <ul class="project-tags">
                   <li>React</li>
                   <li>FastAPI</li>
