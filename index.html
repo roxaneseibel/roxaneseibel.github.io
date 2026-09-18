@@ -163,9 +163,36 @@
               </div>
             </div>
 
-            <aside class="skills-panel reveal" id="competences">
-              <h3>Compétences</h3>
-              <div class="skill-group">
+            <aside class="about-stats reveal">
+              <div class="stat">
+                <p class="stat-value">EPITA</p>
+                <p class="stat-label">Cycle ingénieur</p>
+              </div>
+              <div class="stat">
+                <p class="stat-value">Bac+5</p>
+                <p class="stat-label">Promotion 2027</p>
+              </div>
+              <div class="stat">
+                <p class="stat-value">8</p>
+                <p class="stat-label">Projets réalisés</p>
+              </div>
+              <div class="stat">
+                <p class="stat-value">MTI</p>
+                <p class="stat-label">Mobile, web &amp; design</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Compétences ===== -->
+      <section class="section section-alt" id="competences">
+        <div class="container">
+          <p class="section-kicker reveal">Compétences</p>
+          <h2 class="reveal">Ce que je sais faire</h2>
+
+          <div class="skills-grid">
+            <div class="skill-group reveal">
                 <h4>Design &amp; création</h4>
                 <ul class="skills">
                   <li>Figma</li>
@@ -175,7 +202,7 @@
                   <li>Illustration numérique</li>
                 </ul>
               </div>
-              <div class="skill-group">
+              <div class="skill-group reveal">
                 <h4>Web &amp; mobile</h4>
                 <ul class="skills">
                   <li>React</li>
@@ -186,7 +213,7 @@
                   <li>Kotlin</li>
                 </ul>
               </div>
-              <div class="skill-group">
+              <div class="skill-group reveal">
                 <h4>Langages</h4>
                 <ul class="skills">
                   <li>TypeScript</li>
@@ -200,7 +227,7 @@
                   <li>Shell</li>
                 </ul>
               </div>
-              <div class="skill-group">
+              <div class="skill-group reveal">
                 <h4>Back-end</h4>
                 <ul class="skills">
                   <li>.NET</li>
@@ -208,7 +235,7 @@
                   <li>Quarkus</li>
                 </ul>
               </div>
-              <div class="skill-group">
+              <div class="skill-group reveal">
                 <h4>Bases de données</h4>
                 <ul class="skills">
                   <li>PostgreSQL</li>
@@ -217,7 +244,7 @@
                   <li>RabbitMQ</li>
                 </ul>
               </div>
-              <div class="skill-group">
+              <div class="skill-group reveal">
                 <h4>DevOps</h4>
                 <ul class="skills">
                   <li>Docker</li>
@@ -227,13 +254,13 @@
                   <li>Nginx</li>
                 </ul>
               </div>
-              <div class="skill-group">
+              <div class="skill-group reveal">
                 <h4>Autres</h4>
                 <ul class="skills">
                   <li>Unity (C#)</li>
                 </ul>
               </div>
-              <div class="skill-group">
+              <div class="skill-group reveal">
                 <h4>Atouts</h4>
                 <ul class="skills skills-soft">
                   <li>Autonomie</li>
@@ -241,18 +268,43 @@
                   <li>Dialogue avec des interlocuteurs non techniques</li>
                 </ul>
               </div>
-            </aside>
           </div>
         </div>
       </section>
 
       <!-- ===== Projets ===== -->
-      <section class="section section-alt" id="projets">
+      <section class="section" id="projets">
         <div class="container">
           <p class="section-kicker reveal">Projets</p>
-          <h2 class="reveal">Ce que j'ai réalisé cette année</h2>
+          <h2 class="reveal">Les projets que j'ai réalisés</h2>
 
           <div class="projects">
+            <article class="project-card reveal">
+              <div class="project-thumb placeholder-thumb thumb-manhwa">
+                <span>📖</span>
+                <em class="project-badge">🚧 En cours</em>
+              </div>
+              <div class="project-body">
+                <h3>Manhwa Time</h3>
+                <p>
+                  Projet personnel : une application mobile de suivi de lecture
+                  de webtoons, sur le principe de TV Time pour les séries.
+                  Lecture suivie chapitre par chapitre, commentaires masqués
+                  tant que le chapitre n'est pas lu, et nombre de chapitres
+                  parus recoupé entre trois sources qui se contredisent souvent.
+                  Le catalogue s'importe seul depuis AniList, et les règles
+                  d'accès sont écrites directement dans la base plutôt que dans
+                  l'application.
+                </p>
+                <ul class="project-tags">
+                  <li>React Native</li>
+                  <li>Expo</li>
+                  <li>TypeScript</li>
+                  <li>Supabase</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+            </article>
             <article class="project-card reveal">
               <div class="project-thumb">
                 <img
@@ -752,6 +804,112 @@
                     />
                   </svg>
                 </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-thumb">
+                <img
+                  src="assets/img/ping-maquette.png"
+                  alt="Maquette de PING : l'ensemble des écrans de la plateforme de mods, de la connexion au téléchargement"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-body">
+                <h3>PING</h3>
+                <p>
+                  Projet de fin d'année mené en groupe de cinq, avec un coach
+                  dans le rôle de Product Owner : recueil des besoins, maquette
+                  validée par le client, puis développement. J'ai conçu
+                  <strong>l'intégralité de la maquette</strong> et réalisé
+                  <strong>le développement front-end</strong> qui en découle, ainsi
+                  que la moitié du back-end : une API REST en Java avec
+                  authentification JWT, gestion des projets et de leurs fichiers,
+                  et exécution de commandes Git.
+                </p>
+                <ul class="project-tags">
+                  <li>Java</li>
+                  <li>Quarkus</li>
+                  <li>PostgreSQL</li>
+                  <li>JWT</li>
+                  <li>React</li>
+                  <li>Maquettage</li>
+                </ul>
+                <a
+                  class="project-link"
+                  href="https://www.figma.com/design/JAqBkCZe0kEZeInU9BLfMX/Ping?node-id=0-1"
+                  target="_blank"
+                  rel="noopener"
+                  >Voir la maquette sur Figma
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-thumb placeholder-thumb thumb-42sh">
+                <span>🐚</span>
+              </div>
+              <div class="project-body">
+                <h3>42sh</h3>
+                <p>
+                  Shell POSIX écrit en C, sur le modèle de
+                  <em>bash --posix</em> : analyse lexicale et syntaxique vers un
+                  arbre de syntaxe abstraite, puis exécution des redirections,
+                  pipelines, variables, structures de contrôle, fonctions et
+                  commandes internes. J'ai écrit
+                  <strong>l'intégralité de l'analyse lexicale</strong> et une
+                  partie du parser.
+                </p>
+                <ul class="project-tags">
+                  <li>C</li>
+                  <li>POSIX</li>
+                  <li>Lexer</li>
+                  <li>Parser</li>
+                  <li>Autotools</li>
+                  <li>Tests</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-thumb placeholder-thumb thumb-tiger">
+                <span>🐯</span>
+              </div>
+              <div class="project-body">
+                <h3>Tiger Compiler</h3>
+                <p>
+                  Compilateur pour le langage Tiger, écrit en C++ à quatre sur une
+                  base de code existante : de l'analyse du fichier source jusqu'à
+                  la génération de code LLVM. J'ai réalisé
+                  <strong>toutes les étapes à l'exception du parser</strong> :
+                  analyse lexicale, construction de l'arbre de syntaxe abstraite,
+                  résolution des identificateurs, vérification des types et
+                  génération de la représentation intermédiaire.
+                </p>
+                <ul class="project-tags">
+                  <li>C++</li>
+                  <li>RE/flex</li>
+                  <li>AST</li>
+                  <li>LLVM IR</li>
+                  <li>Design patterns</li>
+                  <li>Autotools</li>
+                </ul>
               </div>
             </article>
           </div>
