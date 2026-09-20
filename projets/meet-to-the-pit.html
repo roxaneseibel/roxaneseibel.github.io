@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet To The Pit, étude de cas | Roxane Seibel</title>
+    <meta
+      name="description"
+      content="Étude de cas de Meet To The Pit : analyse de marché, choix technique, exploration colorimétrique, userflow, zoning, wireframe et maquette finale."
+    />
+
+    <link rel="icon" href="../assets/img/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/case-study.css" />
+  </head>
+  <body class="cs-page">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <!-- ===== Navigation ===== -->
+    <nav class="nav" id="nav">
+      <div class="nav-inner">
+        <a href="../index.html" class="brand">
+          <img src="../assets/img/chat-removebg-preview.png" alt="Logo chat" />
+          <span>Roxane Seibel</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="../index.html#apropos">À propos</a></li>
+          <li><a href="../index.html#competences">Compétences</a></li>
+          <li><a href="../index.html#projets">Projets</a></li>
+          <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== En-tête ===== -->
+    <header class="cs-hero">
+      <div class="container">
+        <a class="cs-back" href="../index.html#projets">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M19 12H5M12 19l-7-7 7-7" />
+          </svg>
+          Retour aux projets
+        </a>
+
+        <p class="section-kicker">Étude de cas</p>
+        <h1>Meet To The Pit</h1>
+        <p class="cs-lead">
+          Comment faire se rencontrer des gens autour d'un concert quand le vrai
+          obstacle n'est ni l'envie ni le budget, mais le fait de n'avoir
+          personne avec qui y aller.
+        </p>
+
+        <dl class="cs-meta">
+          <div>
+            <dt>Mon rôle</dt>
+            <dd>
+              Recherche utilisateur, analyse de marché, direction artistique,
+              maquettage et intégration front
+            </dd>
+          </div>
+          <div>
+            <dt>Contexte</dt>
+            <dd>Projet d'année en équipe, EPITA, spécialisation MTI</dd>
+          </div>
+          <div>
+            <dt>Outils</dt>
+            <dd>Figma, Figma Design, tableaux comparatifs</dd>
+          </div>
+          <div>
+            <dt>Livrables</dt>
+            <dd>
+              Analyse concurrentielle, deux preuves de concept, userflow, zoning,
+              wireframes, maquette finale
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <!-- ===== 1. Le point de départ ===== -->
+      <section class="cs-section">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">1</span>
+            <h2>Le point de départ</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              Beaucoup d'étudiants renoncent à un concert sans que le prix du
+              billet soit en cause. Ils n'ont personne avec qui y aller, ou la
+              logistique les arrête avant même la réservation : comment on y va,
+              où on dort, combien ça coûte une fois le trajet ajouté, et avec qui
+              partager tout ça.
+            </p>
+            <p>
+              Les applications existantes traitent la partie sociale, ou la
+              partie pendant l'événement. Aucune ne traite l'avant. C'est cette
+              intuition qu'il fallait vérifier avant de dessiner quoi que ce
+              soit.
+            </p>
+            <p>
+              <strong>La question de conception</strong> posée à l'équipe :
+              peut-on faire du besoin logistique le point d'entrée de la
+              rencontre, plutôt que de l'affinité musicale ?
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 2. Analyse de marché ===== -->
+      <section class="cs-section cs-section--alt">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">2</span>
+            <h2>Comprendre ce qui existe déjà</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              J'ai étudié quatre applications du secteur, en regardant à chaque
+              fois le positionnement, les fonctionnalités, la direction
+              artistique et les motifs d'interface employés. L'objectif n'était
+              pas de m'en inspirer graphiquement mais de repérer ce que personne
+              ne couvrait.
+            </p>
+
+            <div class="cs-competitors">
+              <article class="cs-competitor">
+                <div class="cs-competitor-head">
+                  <img
+                    class="cs-logo"
+                    src="../assets/img/mtp-cs-logo-radiate.png"
+                    alt="Logo de Radiate : quatre pastilles colorées reliées entre elles sur fond noir."
+                    width="136"
+                    height="139"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>Radiate</h3>
+                    <p class="cs-role">Réseau social rave</p>
+                  </div>
+                </div>
+                <dl>
+                  <dt>Force</dt>
+                  <dd>Une communauté très forte, un segment clair</dd>
+                  <dt>Faiblesse</dt>
+                  <dd>
+                    Une UX confuse qui mêle réseau social, revente de billets et
+                    rencontre, et beaucoup de spam
+                  </dd>
+                  <dt>Ce que j'en retiens</dt>
+                  <dd>
+                    Ne pas empiler les fonctions. Un objet central, un seul.
+                  </dd>
+                </dl>
+              </article>
+
+              <article class="cs-competitor">
+                <div class="cs-competitor-head">
+                  <img
+                    class="cs-logo"
+                    src="../assets/img/mtp-cs-logo-woov.png"
+                    alt="Logo de Woov : un W blanc dans un disque noir."
+                    width="151"
+                    height="155"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>Woov</h3>
+                    <p class="cs-role">Application officielle de festival</p>
+                  </div>
+                </div>
+                <dl>
+                  <dt>Force</dt>
+                  <dd>
+                    Une interface très propre, utile pendant l'événement, adossée
+                    aux organisateurs
+                  </dd>
+                  <dt>Faiblesse</dt>
+                  <dd>
+                    Peu utilisée avant l'événement, mise en relation limitée
+                  </dd>
+                  <dt>Ce que j'en retiens</dt>
+                  <dd>
+                    Le créneau libre est en amont, pas pendant.
+                  </dd>
+                </dl>
+              </article>
+
+              <article class="cs-competitor">
+                <div class="cs-competitor-head">
+                  <img
+                    class="cs-logo"
+                    src="../assets/img/mtp-cs-logo-festivawl.png"
+                    alt="Logo de Festivawl : une tête de hibou violette sur fond sombre."
+                    width="152"
+                    height="151"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>Festivawl</h3>
+                    <p class="cs-role">Découverte de festivals</p>
+                  </div>
+                </div>
+                <dl>
+                  <dt>Force</dt>
+                  <dd>
+                    Une information centralisée, une navigation simple et lisible
+                  </dd>
+                  <dt>Faiblesse</dt>
+                  <dd>Presque aucune dimension sociale</dd>
+                  <dt>Ce que j'en retiens</dt>
+                  <dd>
+                    La clarté d'un calendrier tient à peu de choses : listes,
+                    filtres, hiérarchie stricte.
+                  </dd>
+                </dl>
+              </article>
+
+              <article class="cs-competitor">
+                <div class="cs-competitor-head">
+                  <img
+                    class="cs-logo"
+                    src="../assets/img/mtp-cs-logo-concertbuddy.png"
+                    alt="Logo de ConcertBuddy : une guitare électrique blanche dans un disque noir."
+                    width="194"
+                    height="199"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <div>
+                    <h3>ConcertBuddy</h3>
+                    <p class="cs-role">Trouver un compagnon de concert</p>
+                  </div>
+                </div>
+                <dl>
+                  <dt>Force</dt>
+                  <dd>Un concept simple, entièrement centré sur la rencontre</dd>
+                  <dt>Faiblesse</dt>
+                  <dd>Un design daté, mal adapté au mobile</dd>
+                  <dt>Ce que j'en retiens</dt>
+                  <dd>
+                    L'idée est juste, l'exécution mobile reste à faire.
+                  </dd>
+                </dl>
+              </article>
+            </div>
+
+            <div class="cs-table-wrap">
+              <table class="cs-table">
+                <caption class="visually-hidden">
+                  Synthèse comparative des quatre applications étudiées
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Application</th>
+                    <th scope="col">Positionnement</th>
+                    <th scope="col">Social</th>
+                    <th scope="col">Logistique</th>
+                    <th scope="col">Design</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Radiate</th>
+                    <td>Réseau social rave</td>
+                    <td>Fort</td>
+                    <td>Absent</td>
+                    <td>Flashy</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Woov</th>
+                    <td>Application officielle de festival</td>
+                    <td>Moyen</td>
+                    <td>Moyen</td>
+                    <td>Moderne</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Festivawl</th>
+                    <td>Découverte de festivals</td>
+                    <td>Faible</td>
+                    <td>Faible</td>
+                    <td>Minimal</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ConcertBuddy</th>
+                    <td>Trouver un compagnon de concert</td>
+                    <td>Fort</td>
+                    <td>Absent</td>
+                    <td>Daté</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="cs-spaced">
+              La colonne logistique est vide chez tout le monde. En revanche, les
+              quatre produits partagent les mêmes motifs d'interface : une page
+              événement centrale d'où partent les participants, la discussion,
+              les informations pratiques et la carte. Ce motif est un repère
+              connu des utilisateurs, il n'y avait aucune raison de le casser.
+            </p>
+
+            <div class="cs-decision">
+              <span class="cs-decision-tag">Décision de conception</span>
+              <h3>Faire du groupe logistique l'objet central de l'application</h3>
+              <p>
+                Plutôt qu'un profil que l'on parcourt ou un fil d'actualité,
+                l'unité de base devient le <strong>fil</strong> : un petit groupe
+                qui s'organise autour d'un événement précis, avec un budget, des
+                places, et des étiquettes concert, trajet ou logement. La mise en
+                relation se fait sur la ville de départ, le mode de transport,
+                l'hébergement et les dates, pas sur les goûts musicaux. La page
+                événement reste le point d'entrée, parce que c'est le repère que
+                les utilisateurs connaissent déjà.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 3. Choix technique ===== -->
+      <section class="cs-section">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">3</span>
+            <h2>Trancher entre natif et web</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              Avant de figer les maquettes, il fallait savoir sur quel support
+              elles allaient vivre : une contrainte de plateforme ne se rattrape
+              pas au moment de l'intégration. Nous avons donc construit deux
+              preuves de concept, une application native en React Native avec
+              Expo, et une application web progressive en React.
+            </p>
+
+            <div class="cs-table-wrap">
+              <table class="cs-table">
+                <caption class="visually-hidden">
+                  Comparaison des deux preuves de concept
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Critère</th>
+                    <th scope="col">React Native et Expo</th>
+                    <th scope="col">Application web progressive</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Performances</th>
+                    <td class="is-kept">Très proches du natif</td>
+                    <td>Dépendantes du navigateur</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Accès au matériel</th>
+                    <td class="is-kept">
+                      Complet : caméra, GPS, capteurs, Bluetooth
+                    </td>
+                    <td>Limité</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Expérience utilisateur</th>
+                    <td class="is-kept">Native</td>
+                    <td>Application web</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Distribution</th>
+                    <td>Magasins d'applications</td>
+                    <td class="is-kept">Une simple adresse web</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mise à jour</th>
+                    <td>Nouvelle version à publier</td>
+                    <td class="is-kept">Instantanée au rechargement</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Mode hors ligne</th>
+                    <td>Oui</td>
+                    <td>Oui, via un service worker</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="cs-decision">
+              <span class="cs-decision-tag">Décision technique</span>
+              <h3>React Native avec Expo</h3>
+              <p>
+                L'application web progressive gagnait sur le déploiement et la
+                maintenance, et c'était un vrai argument. Mais la carte, la
+                géolocalisation et les notifications sont au cœur du produit :
+                une mise en relation par ville de départ n'a pas de sens sans
+                accès fiable à la position. Nous avons accepté un déploiement
+                plus lourd pour ne pas plafonner sur les fonctions qui font la
+                valeur de l'application.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 4. Premier jet ===== -->
+      <section class="cs-section cs-section--alt">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">4</span>
+            <h2>Le premier jet, et son erreur</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              Nous avons commencé par ce que tout le monde fait : dessiner des
+              écrans. Sept écrans, dans une palette crème et orangée, de la carte
+              à la création de compte. C'était utile pour se représenter le
+              produit rapidement et se mettre d'accord en équipe.
+            </p>
+            <p>
+              Mais en relisant la série, le problème saute aux yeux : ce sont des
+              pages posées côte à côte, pas un parcours. Rien ne dit dans quel
+              ordre un utilisateur les traverse, ni ce qui se passe quand il ne
+              trouve pas ce qu'il cherche. Nous avions dessiné avant de
+              structurer.
+            </p>
+
+            <figure class="cs-figure reveal">
+              <button
+                type="button"
+                class="cs-zoom"
+                data-shot="../assets/img/mtp-cs-premier-jet.png"
+                data-shot-caption="Premier jet : sept écrans dans une palette crème et orangée, dessinés avant toute structuration du parcours."
+              >
+                <img
+                  src="../assets/img/mtp-cs-premier-jet.png"
+                  alt="Série de sept écrans mobiles dans une palette crème et orangée : la carte, l'accueil, la fiche d'un événement, un fil, la connexion, le profil public et la création de compte."
+                  width="1863"
+                  height="413"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>
+                Le premier jet, en crème et orange. Les écrans existent, le
+                parcours non.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 5. Couleur ===== -->
+      <section class="cs-section">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">5</span>
+            <h2>Chercher la bonne couleur</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              L'analyse de marché avait révélé deux extrêmes : d'un côté le néon
+              sur fond noir de Radiate, de l'autre le fond clair très sage de
+              Woov et Festivawl. Je voulais un entre-deux : assez saturé pour
+              évoquer la salle de concert, assez lisible pour tenir dans une
+              liste dense d'événements.
+            </p>
+            <p>
+              J'ai donc décliné le même couple d'écrans, fiche événement et fil,
+              dans six directions chromatiques, pour comparer à contenu constant
+              plutôt que sur des écrans différents.
+            </p>
+
+            <div class="cs-swatches">
+              <figure class="cs-figure">
+                <button
+                  type="button"
+                  class="cs-zoom"
+                  data-shot="../assets/img/mtp-cs-couleur-1.png"
+                  data-shot-caption="Essai chromatique : lilas et violet clair, sur l'événement Bruno Mars."
+                >
+                  <img
+                    src="../assets/img/mtp-cs-couleur-1.png"
+                    alt="Fiche de l'événement Bruno Mars et son fil, déclinés en lilas et violet clair."
+                    width="791"
+                    height="684"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption>Lilas</figcaption>
+              </figure>
+
+              <figure class="cs-figure">
+                <button
+                  type="button"
+                  class="cs-zoom"
+                  data-shot="../assets/img/mtp-cs-couleur-2.png"
+                  data-shot-caption="Essai chromatique : dégradé violet vers rouge, sur l'événement Bigflo et Oli."
+                >
+                  <img
+                    src="../assets/img/mtp-cs-couleur-2.png"
+                    alt="Fiche de l'événement Bigflo et Oli et son fil, déclinés dans un dégradé violet vers rouge."
+                    width="793"
+                    height="678"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption>Violet vers rouge</figcaption>
+              </figure>
+
+              <figure class="cs-figure">
+                <button
+                  type="button"
+                  class="cs-zoom"
+                  data-shot="../assets/img/mtp-cs-couleur-3.png"
+                  data-shot-caption="Essai chromatique : turquoise avec des accents jaune orangé, sur l'événement Star Academy."
+                >
+                  <img
+                    src="../assets/img/mtp-cs-couleur-3.png"
+                    alt="Fiche de l'événement Star Academy et son fil, déclinés en turquoise avec des cartes et des boutons jaune orangé."
+                    width="788"
+                    height="676"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption>Turquoise et jaune</figcaption>
+              </figure>
+
+              <figure class="cs-figure">
+                <button
+                  type="button"
+                  class="cs-zoom"
+                  data-shot="../assets/img/mtp-cs-couleur-4.png"
+                  data-shot-caption="Essai chromatique : crème et vert d'eau, sur l'événement L2B."
+                >
+                  <img
+                    src="../assets/img/mtp-cs-couleur-4.png"
+                    alt="Fiche de l'événement L2B et son fil, déclinés en crème et jaune d'un côté, vert d'eau de l'autre."
+                    width="792"
+                    height="677"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption>Crème et vert d'eau</figcaption>
+              </figure>
+
+              <figure class="cs-figure">
+                <button
+                  type="button"
+                  class="cs-zoom"
+                  data-shot="../assets/img/mtp-cs-couleur-5.png"
+                  data-shot-caption="Essai chromatique : lavande avec des accents jaunes, sur l'événement The Weeknd."
+                >
+                  <img
+                    src="../assets/img/mtp-cs-couleur-5.png"
+                    alt="Fiche de l'événement The Weeknd et son fil, déclinés en bleu lavande avec un bouton et des cases à cocher jaunes."
+                    width="787"
+                    height="679"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption>Lavande et jaune</figcaption>
+              </figure>
+
+              <figure class="cs-figure">
+                <button
+                  type="button"
+                  class="cs-zoom"
+                  data-shot="../assets/img/mtp-cs-couleur-6.png"
+                  data-shot-caption="Essai chromatique : rose et mauve, sur l'événement Aya Nakamura."
+                >
+                  <img
+                    src="../assets/img/mtp-cs-couleur-6.png"
+                    alt="Fiche de l'événement Aya Nakamura et son fil, déclinés en rose pâle et mauve."
+                    width="797"
+                    height="676"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+                <figcaption>Rose et mauve</figcaption>
+              </figure>
+            </div>
+
+            <p class="cs-spaced-lg">
+              Le dégradé violet vers rouge l'a emporté : c'est celui qui évoquait
+              le mieux la lumière de scène sans tomber dans le néon. Nous l'avons
+              appliqué à l'ensemble des écrans pour la première version.
+            </p>
+
+            <figure class="cs-figure cs-figure--mid reveal">
+              <button
+                type="button"
+                class="cs-zoom"
+                data-shot="../assets/img/mtp-cs-v1.png"
+                data-shot-caption="Version 1 : le dégradé violet vers rouge appliqué à l'ensemble du parcours."
+              >
+                <img
+                  src="../assets/img/mtp-cs-v1.png"
+                  alt="Ensemble des écrans de la version 1 dans un dégradé violet vers rouge : messagerie, conversation, profil privé, création d'événement, création de fil, profil public, archives, historique, avis, fin d'événement, accueil et données personnelles."
+                  width="1324"
+                  height="691"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>
+                La version 1 au complet. Vue d'ensemble, le problème devient
+                visible : à force de dégradés pleine page, les boutons d'action
+                ne sont plus l'élément le plus contrasté de l'écran. La direction
+                artistique mangeait la hiérarchie de l'information.
+              </figcaption>
+            </figure>
+
+            <div class="cs-decision">
+              <span class="cs-decision-tag">Ce que cet essai a appris</span>
+              <h3>Une palette se valide sur un parcours, pas sur un écran</h3>
+              <p>
+                Isolé, chaque écran fonctionnait. Mis bout à bout, l'ensemble
+                perdait ses points d'appui : on ne savait plus où cliquer. Le
+                dégradé a été conservé comme signature, mais cantonné aux
+                en-têtes et aux actions principales, sur un fond redevenu clair.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 6. Structure ===== -->
+      <section class="cs-section cs-section--alt">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">6</span>
+            <h2>Reprendre par la structure</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              Nous avons remis le projet à plat et refait dans le bon ordre ce
+              qui aurait dû venir en premier : le parcours, puis les zones, puis
+              le contenu, et seulement ensuite la forme.
+            </p>
+
+            <figure class="cs-figure cs-figure--mid reveal">
+              <button
+                type="button"
+                class="cs-zoom"
+                data-shot="../assets/img/mtp-cs-userflow.png"
+                data-shot-caption="Userflow : la boucle principale, de la consultation des événements à l'entrée dans un fil."
+              >
+                <img
+                  src="../assets/img/mtp-cs-userflow.png"
+                  alt="Diagramme de parcours utilisateur : je regarde les événements, cet événement m'intéresse, je regarde les fils, ce fil m'intéresse, je rejoins le fil, sinon je crée mon propre fil."
+                  width="1358"
+                  height="552"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>
+                Le userflow. Le point décisif est la sortie de secours : si aucun
+                fil ne convient, l'utilisateur ne revient pas en arrière les mains
+                vides, il crée le sien. Aucune branche du parcours ne se termine
+                sur un cul-de-sac.
+              </figcaption>
+            </figure>
+
+            <figure class="cs-figure cs-figure--narrow reveal">
+              <button
+                type="button"
+                class="cs-zoom"
+                data-shot="../assets/img/mtp-cs-zoning.png"
+                data-shot-caption="Zoning des quatre pages clés, avant tout contenu."
+              >
+                <img
+                  src="../assets/img/mtp-cs-zoning.png"
+                  alt="Zoning en blocs gris des pages création de fil, accueil, événement et fil, chacune découpée en zones fonctionnelles."
+                  width="744"
+                  height="812"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>
+                Le zoning : quatre pages seulement, réduites à leurs blocs. Cette
+                étape a servi à vérifier que le parcours tenait avec un nombre
+                minimal d'écrans.
+              </figcaption>
+            </figure>
+
+            <figure class="cs-figure cs-figure--narrow reveal">
+              <button
+                type="button"
+                class="cs-zoom"
+                data-shot="../assets/img/mtp-cs-wireframe.png"
+                data-shot-caption="Wireframes : le contenu réel placé dans les zones définies."
+              >
+                <img
+                  src="../assets/img/mtp-cs-wireframe.png"
+                  alt="Wireframes des quatre pages avec leur contenu réel : nom, lieu et date de l'événement, coût, nombre de participants, profils vérifiés et barre de navigation basse."
+                  width="741"
+                  height="812"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>
+                Les wireframes. C'est ici qu'ont été arrêtées les informations
+                minimales d'une carte de fil : le titre, le budget, le nombre de
+                participants et le statut vérifié du profil qui l'a ouvert. Tout
+                le reste passe au second plan.
+              </figcaption>
+            </figure>
+
+            <ul class="cs-list">
+              <li>
+                La barre de navigation basse est fixée à cinq entrées, pas plus,
+                pour rester atteignable au pouce.
+              </li>
+              <li>
+                Le budget est affiché sous forme de fourchette, pour filtrer sans
+                avoir à ouvrir chaque fil.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 7. Maquette finale ===== -->
+      <section class="cs-section">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">7</span>
+            <h2>La maquette finale</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              La refonte reprend la signature colorée de la version 1 en
+              l'employant différemment : fond clair, violet réservé aux en-têtes
+              et aux boutons, magenta pour l'action principale d'un écran et elle
+              seule.
+            </p>
+
+            <figure class="cs-figure cs-figure--narrow reveal">
+              <button
+                type="button"
+                class="cs-zoom"
+                data-shot="../assets/img/mtp-cs-maquette-finale.png"
+                data-shot-caption="Maquette finale : création de fil, accueil, fiche événement et détail d'un fil."
+              >
+                <img
+                  src="../assets/img/mtp-cs-maquette-finale.png"
+                  alt="Maquette finale en violet et magenta sur fond clair : création d'un fil, accueil listant les événements, fiche détaillée d'un événement et détail d'un fil avec son budget et ses participants."
+                  width="731"
+                  height="834"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>
+                La maquette finale, issue du userflow et non l'inverse.
+              </figcaption>
+            </figure>
+
+            <p class="cs-spaced-lg">
+              Ce qui a changé par rapport à la version 1 :
+            </p>
+            <ul class="cs-list">
+              <li>
+                Le fond redevient clair et le dégradé se concentre sur les
+                en-têtes, ce qui rend aux boutons leur rôle de point de contraste
+                maximal.
+              </li>
+              <li>
+                Les étiquettes concert, trajet et logement s'affichent sur chaque
+                fil, pour lire en un coup d'œil ce que le groupe organise.
+              </li>
+              <li>
+                La navigation basse passe à cinq entrées, carte, création,
+                accueil, messages et profil, avec l'accueil au centre.
+              </li>
+              <li>
+                Le badge public ou privé est placé sur la carte du fil et non
+                dans son détail, pour éviter d'ouvrir un fil que l'on ne peut pas
+                rejoindre.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 8. Le résultat en vidéo ===== -->
+      <section class="cs-section cs-section--alt">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">8</span>
+            <h2>Le produit en mouvement</h2>
+          </div>
+          <div class="reveal">
+            <p>
+              Une maquette ne montre pas le rythme d'un parcours. Cette
+              présentation vidéo déroule l'application telle qu'elle a été
+              construite, de la recherche d'un événement à l'entrée dans un fil.
+            </p>
+
+            <div class="cs-video">
+              <video
+                controls
+                preload="none"
+                playsinline
+                width="1556"
+                height="1080"
+                poster="../assets/img/mtp-video-poster.png"
+              >
+                <source
+                  src="../assets/video/MTTP_03.mp4"
+                  type="video/mp4"
+                />
+                Votre navigateur ne peut pas lire cette vidéo.
+                <a href="../assets/video/MTTP_03.mp4" download
+                  >Télécharger la présentation</a
+                >
+              </video>
+            </div>
+
+            <p class="cs-spaced cs-video-note">Présentation d'une minute.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 9. Bilan ===== -->
+      <section class="cs-section">
+        <div class="container">
+          <div class="cs-step reveal">
+            <span class="cs-step-num" aria-hidden="true">9</span>
+            <h2>Ce que j'en retiens</h2>
+          </div>
+          <div class="cs-takeaways reveal">
+            <article class="cs-takeaway">
+              <h3>Structurer avant de dessiner</h3>
+              <p>
+                Le userflow aurait coûté une journée en début de projet. Ne pas
+                l'avoir fait nous a obligés à reprendre l'ensemble des maquettes.
+                C'est l'enseignement le plus concret de ce projet.
+              </p>
+            </article>
+            <article class="cs-takeaway">
+              <h3>Juger une palette sur un parcours</h3>
+              <p>
+                Un écran isolé ne dit rien de la lisibilité d'une direction
+                artistique. C'est la vue d'ensemble qui révèle si la hiérarchie
+                tient.
+              </p>
+            </article>
+            <article class="cs-takeaway">
+              <h3>La veille sert à trouver le vide</h3>
+              <p>
+                L'analyse concurrentielle n'a servi à copier aucune interface.
+                Elle a servi à identifier la colonne que personne ne remplissait,
+                et c'est elle qui a défini le produit.
+              </p>
+            </article>
+            <article class="cs-takeaway">
+              <h3>Garder les repères connus</h3>
+              <p>
+                Les quatre concurrents utilisaient la même page événement
+                centrale. La reprendre n'était pas un manque d'originalité, mais
+                le moyen de dépenser l'effort d'apprentissage de l'utilisateur là
+                où le produit est réellement nouveau.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== Bas de page ===== -->
+    <section class="cs-next">
+      <div class="container">
+        <h2>Voir l'application en fonctionnement</h2>
+        <p>
+          Les captures de la version développée se trouvent sur la fiche du
+          projet, dans le portfolio.
+        </p>
+        <a class="btn btn-ghost" href="../index.html#projets"
+          >Retour aux projets</a
+        >
+      </div>
+    </section>
+
+    <!-- ===== Lightbox ===== -->
+    <div class="lightbox" id="shot-lightbox" aria-hidden="true">
+      <div class="modal-backdrop" data-shot-close></div>
+      <figure
+        class="lightbox-box"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Aperçu du visuel"
+      >
+        <button
+          type="button"
+          class="lightbox-close"
+          data-shot-close
+          aria-label="Fermer l'aperçu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+        <img id="lightbox-img" alt="" />
+        <figcaption id="lightbox-caption"></figcaption>
+      </figure>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+      <p>© <span id="year"></span> Roxane Seibel</p>
+    </footer>
+
+    <script src="../assets/js/case-study.js"></script>
+  </body>
+</html>
