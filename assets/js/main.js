@@ -93,6 +93,60 @@ const closeLightbox = () => {
 document.querySelectorAll('.shot').forEach((btn) =>
     btn.addEventListener('click', () => openLightbox(btn))
 );
+
+// ===== Carrousel des captures =====
+// Les flèches sont ajoutées ici plutôt que dans le HTML : sans script,
+// la bande reste défilable au doigt et au trackpad, et les vignettes
+// restent atteignables au clavier puisque ce sont des boutons.
+const arrow = (sens, libelle, trace) => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'shots-nav shots-nav--' + sens;
+    b.setAttribute('aria-label', libelle);
+    b.innerHTML =
+        '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="' +
+        trace +
+        '"/></svg>';
+    return b;
+};
+
+document.querySelectorAll('.project-shots').forEach((bande) => {
+    const cadre = document.createElement('div');
+    cadre.className = 'shots-carousel';
+    bande.parentNode.insertBefore(cadre, bande);
+    cadre.appendChild(bande);
+
+    const prec = arrow('prev', 'Captures précédentes', 'M15 18l-6-6 6-6');
+    const suiv = arrow('next', 'Captures suivantes', 'M9 18l6-6-6-6');
+    cadre.append(prec, suiv);
+
+    const pas = () => bande.clientWidth * 0.8;
+    prec.addEventListener('click', () =>
+        bande.scrollBy({ left: -pas(), behavior: 'smooth' })
+    );
+    suiv.addEventListener('click', () =>
+        bande.scrollBy({ left: pas(), behavior: 'smooth' })
+    );
+
+    const rafraichir = () => {
+        const max = bande.scrollWidth - bande.clientWidth;
+        const rien = max < 4;
+        prec.hidden = rien;
+        suiv.hidden = rien;
+        prec.disabled = bande.scrollLeft < 4;
+        suiv.disabled = bande.scrollLeft > max - 4;
+    };
+
+    bande.addEventListener('scroll', rafraichir, { passive: true });
+    window.addEventListener('resize', rafraichir);
+    // Les images sont en chargement différé : la largeur totale change
+    // après coup, il faut recalculer à ce moment-là.
+    if ('ResizeObserver' in window) new ResizeObserver(rafraichir).observe(bande);
+    bande.querySelectorAll('img').forEach((img) => {
+        if (!img.complete) img.addEventListener('load', rafraichir, { once: true });
+    });
+    rafraichir();
+});
 lightbox.querySelectorAll('[data-shot-close]').forEach((el) =>
     el.addEventListener('click', closeLightbox)
 );
